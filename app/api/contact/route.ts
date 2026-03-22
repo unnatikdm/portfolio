@@ -102,19 +102,10 @@ export async function POST(request: Request) {
     } catch (emailError) {
       console.error('Email sending error:', emailError);
       
-      // Fallback: Just log the submission and return success (for development)
-      console.log('Contact form submission (fallback):', {
-        name: validatedData.name,
-        email: validatedData.email,
-        subject: validatedData.subject || 'No subject',
-        message: validatedData.message,
-        timestamp: new Date().toISOString(),
-      });
-
       return NextResponse.json({
-        success: true,
-        message: 'Thank you for your message! I\'ll get back to you soon.',
-      });
+        success: false,
+        error: 'Email failed to send. Please check your SMTP configuration or App Password.',
+      }, { status: 500 });
     }
   } catch (error) {
     if (error instanceof z.ZodError) {

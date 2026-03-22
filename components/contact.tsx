@@ -214,7 +214,7 @@ export function Contact() {
               <h3 className="text-xl font-bold text-secondary mb-4">Connect With Me</h3>
               <div className="space-y-3">
                 {[
-                  { icon: Mail, label: 'Email', href: 'mailto:unnati.kadam@example.com', color: 'hover:text-primary' },
+                  { icon: Mail, label: 'Email', href: 'mailto:unnatikadam50a@gmail.com', color: 'hover:text-primary' },
                   { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/unnati-kadam', color: 'hover:text-primary' },
                   { icon: Github, label: 'GitHub', href: 'https://github.com/unnatikadam', color: 'hover:text-secondary' },
                 ].map(({ icon: Icon, label, href, color }) => (
